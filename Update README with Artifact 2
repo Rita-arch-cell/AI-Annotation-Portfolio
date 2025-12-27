@@ -1,0 +1,212 @@
+# AI-Annotation-Portfolio
+Showcase of data labeling, annotation, and evaluation design skills for RLHF/SFT roles
+# Legal Reasoning Evaluation: McGuire v. Newark
+
+## Employment Discrimination Case Analysis - RLHF Annotation Portfolio
+
+---
+
+## 📋 Project Overview
+
+This project demonstrates my ability to design complex evaluation rubrics for assessing AI model performance on legal reasoning tasks. It showcases skills directly applicable to RLHF (Reinforcement Learning from Human Feedback) annotation work, including:
+
+- ✅ Multi-source document synthesis
+- ✅ Criterion design (extraction, reasoning, style)
+- ✅ Source citation and justification
+- ✅ Dependency mapping
+- ✅ Comparative analysis tasks
+- ✅ Quantitative reasoning evaluation
+
+---
+
+## 🎯 What This Project Tests
+
+This assessment evaluates whether an AI model can:
+
+1. **Extract legal standards** from authoritative sources (statutes, case law)
+2. **Apply multi-step legal frameworks** to complex fact patterns
+3. **Synthesize evidence** across multiple documents
+4. **Perform comparative analysis** using quantitative data
+5. **Reason about ambiguous situations** (e.g., determining supervisor status)
+6. **Structure professional legal writing** using IRAC format
+
+---
+
+## 📚 Project Structure
+
+### **Source Documents (4 PDFs)**
+
+| File | Description | Purpose |
+|------|-------------|---------|
+| `Source_1_Ohio_RC_4112_02.pdf` | Ohio statutory text prohibiting employment discrimination | Tests extraction of exact legal language |
+| `Source_2_Hampel_Framework.pdf` | Ohio Supreme Court 4-part test for hostile work environment | Tests framework identification & application |
+| `Source_3_McDonnell_Douglas_Framework.pdf` | 3-step burden-shifting analysis for discrimination claims | Tests multi-step reasoning |
+| `Source_4_McGuire_Case_Facts.pdf` | Complete case facts, timeline, evaluations, witness testimony | Tests evidence synthesis & comparative analysis |
+
+### **Evaluation Materials**
+
+- **`Prompt_and_Rubric.md`** - Complete prompt + 10-criterion rubric with justifications
+- **`README.md`** - This file (project documentation)
+
+---
+
+## ⚖️ The Legal Case: McGuire v. Newark
+
+**Real Case:** McGuire v. City of Newark, 2020-Ohio-4226 (Fifth Appellate District)
+
+### Background:
+- **Plaintiff:** Kayla McGuire (female police officer trainee)
+- **Defendant:** City of Newark Police Department
+- **Claims:** Gender discrimination + hostile work environment
+- **Key Facts:**
+  - McGuire terminated from police training program after 5 months
+  - Subjected to repeated sexual comments by training officers
+  - Male trainee (Beach) with similar/worse performance passed program
+  - Employer failed to investigate harassment complaints
+
+### Why This Case?
+- **Dual legal theories:** Tests discrimination AND harassment analysis
+- **Comparative evidence:** Requires side-by-side evaluation data comparison
+- **Ambiguity:** Not a "slam dunk" case—forces nuanced reasoning
+- **Real-world relevance:** Common employment law scenario
+
+---
+
+## 🧠 The 10-Criterion Rubric
+
+### Criterion Breakdown by Type:
+
+**Extraction (40%)** - Can the model find and cite specific information?
+- Criterion 1: McDonnell Douglas elements
+- Criterion 2: McGuire's qualifications  
+- Criterion 4: Hampel four-part test
+- Criterion 9: Statutory language from R.C. 4112.02(A)
+
+**Reasoning (50%)** - Can the model apply legal standards to facts?
+- Criterion 3: Comparative PTO evaluation analysis (quantitative)
+- Criterion 5: "Unwelcome" + "based on sex" analysis
+- Criterion 6: Frequency calculation (mathematical reasoning)
+- Criterion 7: Supervisor status determination (inference)
+- Criterion 8: "Severe or pervasive" totality analysis (most complex)
+
+**Style (10%)** - Can the model follow formatting requirements?
+- Criterion 10: IRAC structure with clear headings
+
+### Primary vs. Not Primary Objectives:
+- **8 Primary:** Must-have criteria (directly answer the legal questions)
+- **2 Not Primary:** Nice-to-have (enhance quality but not essential)
+
+---
+
+## 🔍 Key Design Decisions
+
+### 1. **Why Two Legal Theories?**
+Most employment cases involve multiple claims. Testing both discrimination AND harassment demonstrates:
+- Ability to handle complex, multi-faceted analyses
+- Understanding that different claims require different legal frameworks
+- Skill in organizing responses with clear sections
+
+### 2. **Why Include Quantitative Reasoning? (Criterion 6)**
+RLHF work often involves data analysis. Requiring frequency calculations (1-2 times/week × 20 weeks) tests whether models can:
+- Extract numerical data from text
+- Perform basic arithmetic
+- Connect calculations to legal conclusions
+
+### 3. **Why Test Supervisor Status? (Criterion 7)**
+This tests **inference ability**—Fleming isn't explicitly labeled "supervisor" in the facts, but his role (evaluating, recommending termination) implies supervisory authority. This ambiguity mirrors real RLHF annotation where raters must make judgment calls.
+
+### 4. **Why "Totality of Circumstances"? (Criterion 8)**
+This is the **most sophisticated reasoning task** in the rubric. It requires:
+- Remembering ALL harassment incidents from earlier analysis
+- Applying multi-factor legal test (frequency, severity, interference, harm)
+- Synthesizing cumulative effect (not just counting incidents)
+- Making subjective judgment ("Would a reasonable person find this hostile?")
+
+---
+
+## 📖 What I Learned Building This
+
+### **About Legal Reasoning:**
+- Legal analysis follows structured frameworks (McDonnell Douglas, Hampel)
+- Courts require "totality of circumstances" analysis—no single factor is dispositive
+- Comparative evidence is powerful but requires careful attention to whether employees are "similarly situated"
+- Employer liability turns on supervisor status and response to complaints
+
+### **About Rubric Design:**
+- **Justifications must be specific:** Vague rationales like "Source 4 discusses this" don't help raters verify answers
+- **Dependencies matter:** Some criteria logically build on others (e.g., can't analyze supervisor harassment before identifying supervisor)
+- **Balance extraction & reasoning:** Pure extraction is too easy; pure reasoning with no facts to cite is unverifiable
+- **Weight appropriately:** Not every criterion is equally important to answering the core question
+
+### **About RLHF Annotation:**
+- Good rubrics make implicit expectations explicit
+- Every criterion should be independently verifiable by checking sources
+- Quantitative criteria (like frequency calculations) reduce subjectivity
+- Style criteria acknowledge that form matters, not just content
+
+---
+
+## 🚀 How This Applies to RLHF Work
+
+| RLHF Skill | How This Project Demonstrates It |
+|------------|-----------------------------------|
+| **Multi-source synthesis** | Model must pull facts from 4 different PDFs |
+| **Pairwise comparison** | Comparing McGuire vs. Beach training records |
+| **Dimensional scoring** | 10 independent criteria, each scored separately |
+| **Justification writing** | Every criterion explains WHERE to find the answer |
+| **Dependency tracking** | Criterion 8 depends on 5 & 6 |
+| **Instruction following** | Criterion 10 tests adherence to IRAC format requirement |
+
+---
+
+## 🛠️ Technical Skills Demonstrated
+
+- **PDF creation** using Python (reportlab library)
+- **Document structuring** for professional legal materials
+- **Markdown documentation** for clear communication
+- **GitHub portfolio organization** 
+- **Legal research** (reading actual court opinions, extracting relevant holdings)
+
+---
+
+## 💡 Future Enhancements
+
+If I expand this project, I could add:
+
+1. **Sample "Golden Response"** - Show what an excellent AI answer looks like
+2. **Retaliation claim analysis** - Add 3-5 more criteria for temporal proximity, but-for causation
+3. **Comparative rubric scores** - Evaluate multiple AI model responses (GPT-4, Claude, Llama) against the rubric
+4. **Inter-rater reliability study** - Have multiple human raters score the same response to test rubric clarity
+5. **Failure mode analysis** - Document common ways AI models fail on legal reasoning tasks
+
+---
+
+## 📧 About This Portfolio
+
+This project is part of my AI Annotation Portfolio demonstrating RLHF expertise for roles at companies like:
+- Scale AI
+- Surge AI
+- Outlier AI
+- Anthropic
+- OpenAI
+- Google DeepMind
+
+**Created by:** [Your Name]  
+**Contact:** [Your Email/LinkedIn]  
+**Date:** December 2024
+
+---
+
+## 📝 License & Attribution
+
+- **Legal case source:** McGuire v. City of Newark, 2020-Ohio-4226 (public domain court opinion)
+- **Legal frameworks:** McDonnell Douglas Corp. v. Green (1973), Hampel v. Food Ingredients (2000)
+- **Project code:** Original work for portfolio demonstration
+
+---
+
+## 🙏 Acknowledgments
+
+This project was developed to showcase practical RLHF annotation skills through a real-world legal reasoning task. The case was selected for its complexity, ambiguity, and requirement for multi-source synthesis—qualities that mirror the challenges human raters face when evaluating AI model outputs.
+
+Special thanks to the legal community for publishing court opinions that enable educational projects like this.
